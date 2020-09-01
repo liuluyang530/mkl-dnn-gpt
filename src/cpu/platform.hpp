@@ -31,7 +31,8 @@
 #if defined(DNNL_X64) + defined(DNNL_AARCH64) + defined(DNNL_ARCH_GENERIC) == 0
 #if defined(__x86_64__) || defined(_M_X64)
 #define DNNL_X64 1
-#elif defined(__aarch64__)
+#elif defined(__aarch64__) || defined(__gptx__)
+
 #define DNNL_AARCH64 1
 #else
 #define DNNL_ARCH_GENERIC 1
